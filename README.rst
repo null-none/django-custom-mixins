@@ -3,5 +3,20 @@ django-custom-mixins
 
 List custom mixins for projects
 
-Mixins: \* AjaxOnlyViewMixin \* NeverCacheMixin \* LoginRequiredMixin \*
-CSRFExemptMixin \* CacheMixin \* CacheControlMixin
+=======
+Install
+=======
+
+.. code-block:: bash
+
+    pip install django-custom-mixins
+
+
+Mixins:
+
+-  AjaxOnlyViewMixin
+-  NeverCacheMixin
+-  LoginRequiredMixin
+-  CSRFExemptMixin
+-  CacheMixin
+-  CacheControlMixin
