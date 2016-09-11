@@ -12,7 +12,9 @@ Install
     pip install django-custom-mixins
 
 
-Mixins:
+=======
+Mixins
+=======
 
 -  AjaxOnlyViewMixin
 -  NeverCacheMixin
@@ -20,3 +22,10 @@ Mixins:
 -  CSRFExemptMixin
 -  CacheMixin
 -  CacheControlMixin
+
+
+=======
+License
+=======
+
+MIT
