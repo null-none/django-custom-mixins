@@ -22,7 +22,7 @@ Mixins
 -  CSRFExemptMixin
 -  CacheMixin
 -  CacheControlMixin
-
+-  PaginatorMixin
 
 =======
 License
