@@ -23,6 +23,7 @@ Mixins
 -  CacheMixin
 -  CacheControlMixin
 -  PaginatorMixin
+-  CSVAdmin
 
 =======
 License
