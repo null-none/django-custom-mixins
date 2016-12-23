@@ -137,6 +137,15 @@ class CSRFExemptMixin(object):
         return super(CSRFExemptMixin, self).dispatch(*args, **kwargs)
 
 
+class GetRequestMixin(object):
+
+    def _get_request(self):
+        request = self.context.get('request')
+        if not isinstance(request, HttpRequest):
+            request = request._request
+        return request
+
+
 class CacheMixin(object):
     cache_timeout = 60
 

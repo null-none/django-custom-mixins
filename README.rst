@@ -24,6 +24,7 @@ Mixins
 -  CacheControlMixin
 -  PaginatorMixin
 -  CSVAdmin
+-  GetRequestMixin
 
 =======
 License
