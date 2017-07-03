@@ -8,6 +8,16 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import TemplateView
 from django.core.paginator import (Paginator, EmptyPage, PageNotAnInteger)
 from django.contrib import admin
+from django.utils.deprecation import MiddlewareMixin
+
+
+
+class DisableCsrfCheck(MiddlewareMixin):
+
+    def process_request(self, req):
+        attr = '_dont_enforce_csrf_checks'
+        if not getattr(req, attr, False):
+            setattr(req, attr, True)
 
 
 class CSVAdmin(admin.ModelAdmin):

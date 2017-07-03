@@ -25,6 +25,7 @@ Mixins
 -  PaginatorMixin
 -  CSVAdmin
 -  GetRequestMixin
+-  DisableCsrfCheck
 
 =======
 License
