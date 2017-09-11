@@ -9,7 +9,18 @@ from django.views.generic import TemplateView
 from django.core.paginator import (Paginator, EmptyPage, PageNotAnInteger)
 from django.contrib import admin
 from django.utils.deprecation import MiddlewareMixin
+from django.utils import timezone
 
+import pytz
+
+
+class TimezoneMiddleware(object):
+    def process_request(self, request):
+        tzname = request.session.get('django_timezone')
+        if tzname:
+            timezone.activate(pytz.timezone(tzname))
+        else:
+            timezone.deactivate()
 
 
 class DisableCsrfCheck(MiddlewareMixin):
@@ -84,6 +95,7 @@ class CSVAdmin(admin.ModelAdmin):
         return response
     csv_export.short_description = \
         'Exported selected %(verbose_name_plural)s as CSV'
+
 
 class PaginatorMixin(object):
     def __init__(self, queryset, numb_pages, request_page):
