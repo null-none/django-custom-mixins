@@ -40,6 +40,7 @@ Mixins
 -  DisableCsrfCheck
 -  TimezoneMiddleware
 -  ModelDiffMixin
+-  ModelAdminRequestMixin
 
 =======
 Donation
