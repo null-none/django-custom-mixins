@@ -230,8 +230,6 @@ class CacheControlMixin(object):
         patch_response_headers(response, self.get_cache_timeout())
         return response
 
-    from django.forms.models import model_to_dict
-
 
 class ModelDiffMixin(object):
 
