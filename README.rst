@@ -41,6 +41,7 @@ Mixins
 -  TimezoneMiddleware
 -  ModelDiffMixin
 -  ModelAdminRequestMixin
+-  CORSMiddleware
 
 =======
 Donation
