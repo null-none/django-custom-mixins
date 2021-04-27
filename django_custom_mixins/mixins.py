@@ -15,6 +15,16 @@ from django.forms.models import model_to_dict
 import pytz
 import threading
 
+class CORSMiddleware(object):
+    def __init__(self, get_response):
+        self.get_response = get_response
+
+    def __call__(self, request):
+        response = self.get_response(request)
+        response["Access-Control-Allow-Origin"] = "*"
+
+        return response
+
 class ModelAdminRequestMixin(object):
     def __init__(self, *args, **kwargs):
         # let's define this so there's no chance of AttributeErrors
